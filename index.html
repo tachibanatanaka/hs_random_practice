@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+    <title>Document</title>
+</head>
+<body>
+        <button id="click" onclick="getImage()">メイジの3種の神器をランダムに切り替える</button>
+    <br>
+        <img src="image1.png" id="place">
+    <script>
+        let a = document.getElementById('click');
+        a.onclick = function() {
+            let images = ['image1.png', 'image2.png', 'image3.png'];
+            let place = document.getElementById('place');
+            let random = Math.floor(Math.random() * images.length);
+            place.src = images[random];
+        }
+    </script>
+</body>
+</html>
